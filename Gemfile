@@ -34,15 +34,16 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
-  gem 'sqlite3', '~> 1.4'
+  # gem 'sqlite3', '~> 1.4'
+  gem 'pg'
   # gem 'rack-mini-profiler', '~> 2.0'
 end
 
 # for production
-group :production do 
-  gem 'pg', '~> 1.2', '>= 1.2.3'
-  gem 'rails_12factor', '0.0.2'
-end
+# group :production do 
+#   gem 'pg', '~> 1.2', '>= 1.2.3'
+#   gem 'rails_12factor', '0.0.2'
+# end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
