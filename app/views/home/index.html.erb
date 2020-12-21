@@ -1,2 +1,74 @@
-<h1>Welcome to CS312 (Introduction to Programming) Learning Hub!</h1>
-This is my first rails webpage! 
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 2%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<% if student_signed_in? %>
+<p></p>
+<div>
+    <p style="float: right;">
+    <img src="https://www.pngkey.com/png/full/396-3960421_abstract-png-transparent-images-connect-the-data-dots.png" height="85%" width="85%"></p>
+    <%# <h2>Welcome to CS312 (Introduction to Programming) Learning Hub!</h2> %>
+    <h2>Welcome! You are currently logged in.</h2>
+<p></p>
+
+<footer>
+<div class = "footer">
+<a href="https://cs.utexas.edu">
+ <img  src="https://www.cs.utexas.edu/~gill/images/UTA_CS_logo.png" alt="", style="width:25%;height:25%;">
+</div>
+</a>
+</footer>
+
+<% else %>
+
+<p></p>
+<div>
+    <p style="float: right;">
+    <img src="https://www.pngkey.com/png/full/396-3960421_abstract-png-transparent-images-connect-the-data-dots.png" height="85%" width="85%"></p>
+            <h2>Welcome to the CS312 Learning Hub!</h2>
+    <%# <h2>Welcome to CS312 (Introduction to Programming) Learning Hub!</h2> %>
+</div>
+<br>
+<h3 style="font-size:20px">If this is your first time, please read the information below:</h3>
+<p></p>
+
+<%# <em>Instructions / Getting Started (Please follow these steps sequentially):</em> %>
+<em>How do I get started?</em>
+<ol>
+<li>Navigate to the tab above and select "Sign Up".</li>
+<li>Enter all the required fields, create account, and a series of new tabs will unlock.</li>
+<li>After sign up, the welcome page will update for further information on new tabs.</li>
+<li>These new tabs include: <em>Office Hours Queue, Interactive Learning, Tutorials, etc.</em></li>
+<li>If you already have an account, please navigate to "Sign In".</li>
+<li>If you have any questions, please navigate to the "Contact Us" tab.</li>
+</ol>
+<p></p>
+<em>Who is this web application designed for?</em>
+<li>Students in CS312.</li>
+<li>Any student trying to learn the basics of programming.</li>
+
+<p></p>
+<em>What is the purpose of the web application?</em>
+<li>Provide a centrality point of all things CS312.</li>
+<li>Assist students in the learning process.</li>
+<li>Help students be successful and engage in their learning.</li>
+<p></p>
+
+<footer>
+<div class = "footer">
+<a href="https://cs.utexas.edu">
+ <img  src="https://www.cs.utexas.edu/~gill/images/UTA_CS_logo.png" alt="", style="width:40%;height:40%;">
+</div>
+</a>
+</footer>
+
+<% end %>

@@ -21,4 +21,10 @@ class HomeController < ApplicationController
   def welcome
   end
 
+  def privacy
+  end
+
+  def queue
+  end
+
 end

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'home/interactive'
   get 'home/contact'
   get 'home/welcome'
+  get 'home/privacy'
+  get 'home/queue'
   root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
