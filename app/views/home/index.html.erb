@@ -2,28 +2,79 @@
 .footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 2%;
   width: 100%;
-  margin-bottom: 2%;
   background-color: transparent;
   color: white;
   text-align: center;
+}
+.imageStyle {
+   width: 100%;
+  height: auto;
+}
+
+.margin {
+  margin-left: 5%;
+}
+
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+#large-header {
+	background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-1 .main-title {
+	text-transform: uppercase;
+	font-size: 4.2em;
+	letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+	font-weight: 200;
+}
+
+@media only screen and (max-width : 768px) {
+	.demo-1 .main-title {
+		font-size: 3em;
+	}
 }
 </style>
 
 <% if student_signed_in? %>
 <p></p>
-<div>
-    <p style="float: right;">
-    <img src="https://www.pngkey.com/png/full/396-3960421_abstract-png-transparent-images-connect-the-data-dots.png" height="85%" width="85%"></p>
+<%# <div class = imageStyle> %>
+    <%# <p style="float: right;"> %>
+    <%# <img src="https://www.pngkey.com/png/full/396-3960421_abstract-png-transparent-images-connect-the-data-dots.png" height="90%" width="90%"></p> %>
     <%# <h2>Welcome to CS312 (Introduction to Programming) Learning Hub!</h2> %>
-    <h2>Welcome! You are currently logged in.</h2>
+    <h3>Student Homepage</h3>
+
 <p></p>
 
 <footer>
 <div class = "footer">
 <a href="https://cs.utexas.edu">
- <img  src="https://www.cs.utexas.edu/~gill/images/UTA_CS_logo.png" alt="", style="width:25%;height:25%;">
+ <img  src="https://www.cs.utexas.edu/~gill/images/UTA_CS_logo.png" alt="", style="width:35%;height:35%;">
 </div>
 </a>
 </footer>
@@ -31,14 +82,15 @@
 <% else %>
 
 <p></p>
-<div>
-    <p style="float: right;">
-    <img src="https://www.pngkey.com/png/full/396-3960421_abstract-png-transparent-images-connect-the-data-dots.png" height="85%" width="85%"></p>
-            <h2>Welcome to the CS312 Learning Hub!</h2>
+<div >
+    <p style="float: right;"class = "margin" >
+    <img src="https://www.pngkey.com/png/full/396-3960421_abstract-png-transparent-images-connect-the-data-dots.png" height="90%" width="90%"></p>
+  <div class = "margin">
+  <h3>Welcome to the CS312 Learning Hub!</h3>
     <%# <h2>Welcome to CS312 (Introduction to Programming) Learning Hub!</h2> %>
-</div>
+
 <br>
-<h3 style="font-size:20px">If this is your first time, please read the information below:</h3>
+<h3 style="font-size:16px">If this is your first time, please read the information below:</h3>
 <p></p>
 
 <%# <em>Instructions / Getting Started (Please follow these steps sequentially):</em> %>
@@ -62,11 +114,11 @@
 <li>Assist students in the learning process.</li>
 <li>Help students be successful and engage in their learning.</li>
 <p></p>
-
+</div>
 <footer>
 <div class = "footer">
 <a href="https://cs.utexas.edu">
- <img  src="https://www.cs.utexas.edu/~gill/images/UTA_CS_logo.png" alt="", style="width:40%;height:40%;">
+ <img  src="https://www.cs.utexas.edu/~gill/images/UTA_CS_logo.png" alt="", style="width:35%;height:35%;">
 </div>
 </a>
 </footer>
