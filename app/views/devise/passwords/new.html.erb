@@ -1,15 +1,59 @@
-<h2>Forgot your password?</h2>
+<style>
+.content {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.imageStyle {
+   width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+
+.text {
+  margin-top: 10%;
+}
+
+#hp  {
+float: right;    
+ margin: 0 0 0 0;
+}
+
+.floatRight{float:right;margin-left:0px}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 2%;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+
+</style>
+
+<br>
+<div class = "content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1200px-Twitter_Verified_Badge.svg.png" alt = "" class="imageStyle"/>
+</div>
+<div style = "text">
+<h1>Forgot Password</h1> 
+</div>
+<p></p>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field form-group">
+    <p style="font-size:18px"> <%=  f.label :email %><p>
+    <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email" %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send Reset Instructions", class: "btn btn-primary" %>
   </div>
 <% end %>
 
