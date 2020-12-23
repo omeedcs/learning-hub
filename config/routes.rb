@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   devise_for :students
   resources :users
   #get 'home/index'

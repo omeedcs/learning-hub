@@ -1,0 +1,20 @@
+<style> 
+  img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+</style>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>   <%= @article.title %> </h1>
+
+<p class = "img">
+    <%= image_tag @article.image_url, align: 'right' %>
+      <%= @article.body %>
+</p>
+<% if student_signed_in? %>
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<% end %>
+<%= link_to 'Back', articles_path %>

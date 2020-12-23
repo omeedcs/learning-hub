@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+
+<%if request.original_url.split('=').last.include? '/' %>
+<h1>Tutorials</h1>
+<p></p>
+<p>In order to assist students in developing a strong understanding of introductory programming concepts in Java, I have made a range of tutorials available to read and study.</p>
+<p>Tutorials are stored in a blog format, and upon student request, new articles will be published. 
+<p>Clicking on the blue-underlined title will take you to the desired page. Thank you!</p>
+<br>
+ <% else %> 
+ <h1>All <%= request.original_url.split('=').last %> Articles</h1>
+ <% end %>
+    <% @articles.each do |article| %>
+  <h3><%= link_to article.title, article %></h3>
+    <p><%= truncate(article.body, length: 200) %></p>
+  <% end %>
+
+<h3>CS312 Categories</h3>
+<p> Categories inspired by the curriculum mapped out on Professor John's Website.</p>
+<div class = "container">
+<div class = "row">
+  <div class = "col-lg-10"> 
+  <ul class = "nav nav-pills nav-stacked">
+  <%# <li> <%= link_to 'All Categories', root_path %> </li>
+  <% Category.all.each do |category| %>
+  <li> <%= link_to category.name, articles_path(category: category.name)%>
+  <% end %>
+  </ul>
+  </div>
+  </div>
+  </div>
+
+
+
+ <% if current_student && current_student.admin %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+<br>
+<br>
+
+<div class="card">
+</div>
+<p></p>
+<h3> Article Creation Panel (For Administrators Only)</h3>
+<p></p>
+<div class="card">
+</div>
+<p></p>
+<p></p>
+<p> Hello instructor! This button will navigate you to the page where a new article can be created.</p>
+<p> Please email <b>omeed@cs.utexas.edu</b> for any questions.</p>
+<p></p>
+<p></p>
+<%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
+<br>
+<br>
+<div class="card">
+</div>
+<p></p>
+<p></p>
+<h3> Article Management Panel (For Administrators Only)<h3>
+<p></p>
+<div class="card">
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %> &nbsp &nbsp</td>
+        <%# <td><%= truncate(article.body, length: 30) %>
+        <%# <td><%= article.image_url %>
+        <td><%= link_to 'Show', article, class: 'btn btn-danger' %></td>
+        <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-danger' %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+      </tr>
+      </div>
+     <% end %>
+  </tbody>
+</table>
+<br>
+<% end %>
+<br>
+<br>
+<br>
