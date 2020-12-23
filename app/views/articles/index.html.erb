@@ -13,7 +13,7 @@
  <h3>CS312 Articles/Tutorials</h3>
 <p></p>
     <% @articles.each do |article| %>
-  <h3><%= link_to article.title, article %></h3>
+  <li><%= link_to article.title, article %></li>
   <p></p>
     <%# <p><%= truncate(article.body, length: 200) %>
   <% end %>
