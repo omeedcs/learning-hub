@@ -10,11 +10,15 @@
  <% else %> 
  <h1>All <%= request.original_url.split('=').last %> Articles</h1>
  <% end %>
+ <h3>CS312 Articles/Tutorials</h3>
+<p></p>
     <% @articles.each do |article| %>
   <h3><%= link_to article.title, article %></h3>
-    <p><%= truncate(article.body, length: 200) %></p>
+  <p></p>
+    <%# <p><%= truncate(article.body, length: 200) %>
   <% end %>
 
+  <br>
 <h3>CS312 Categories</h3>
 <p> Categories inspired by the curriculum mapped out on Professor John's Website.</p>
 <div class = "container">
