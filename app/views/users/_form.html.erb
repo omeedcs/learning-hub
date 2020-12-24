@@ -1,7 +1,7 @@
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this student from being saved:</h2>
 
       <ul>
         <% user.errors.each do |error| %>
@@ -11,32 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  <br>
+  <div class="field form-group">
+    <p>What is your first name? </p>
+    <%= form.text_field :first_name, class: "form-control",  placeholder: "First Name" %>
   </div>
+  <br>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+  <div class="field form-group">
+    <p>What is your last name? </p>
+    <%= form.text_field :last_name, class: "form-control" , placeholder: "Last Name"%>
   </div>
+  <br>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="field form-group">
+    <p>What is your email? </p>
+    <%= form.text_field :email, class: "form-control" , placeholder: "Email"%>
   </div>
+  <br>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="field form-group">
+    <p>What is your mobile phone number? </p>
+    <%= form.text_field :phone , class: "form-control", placeholder: "Phone Number" %>
   </div>
-
-  <div class="field">
-    <%= form.label :twitter %>
-    <%= form.text_field :twitter %>
+  <br>
+  <div class="field form-group">
+    <p>What is one sentence that describes you?</p>
+    <%= form.text_field :twitter, class: "form-control", placeholder: "My Answer" %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

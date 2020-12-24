@@ -12,7 +12,7 @@ class UsersTest < ApplicationSystemTestCase
 
   test "creating a User" do
     visit users_url
-    click_on "New User"
+    click_on "Create New Profile"
 
     fill_in "Email", with: @user.email
     fill_in "First name", with: @user.first_name
@@ -21,7 +21,7 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Twitter", with: @user.twitter
     click_on "Create User"
 
-    assert_text "User was successfully created"
+    assert_text "Friend profile was successfully created"
     click_on "Back"
   end
 
@@ -36,7 +36,7 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Twitter", with: @user.twitter
     click_on "Update User"
 
-    assert_text "User was successfully updated"
+    assert_text "Friend profile was successfully updated"
     click_on "Back"
   end
 
@@ -46,6 +46,6 @@ class UsersTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "User was successfully destroyed"
+    assert_text "Friend profile was successfully destroyed from database"
   end
 end

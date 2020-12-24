@@ -23,6 +23,3 @@ test:
 production:
   <<: *default
   database: my_database_production
-
-  #this is the production database configuration 
-    # Note by Omeed

@@ -1,35 +1,97 @@
-<p id="notice"><%= notice %></p>
+    <%# <p style="float: right;" >
+    <img src="https://static6.depositphotos.com/1035649/599/v/600/depositphotos_5993687-stock-illustration-friendship.jpg" 
+    height="30%" width="30%"></p> %>
+<style>
+.button {
+  position: relative;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
 
-<h1>Users</h1>
 
-<table>
-  <thead>
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+</style>
+
+    <h1>Find Friends in CS312</h1>
+
+<br>
+<h3>About Friend Finder</h3>
+<p>During these times, it can be hard to connect with fellow classmates. We completely understand that.</p>
+<p>Studies have shown that when group studying is done correctly, it can have SEVERAL advantages vs. studying alone.</p>
+<p>A study done by a behavioral scientist showed that studying in groups actually increases the chance of processing difficult conceptual topics.</p>
+<p>Don't be scared to reach out to fellow classmates, but keep ALL academic integrity information in mind.</p>
+<p>You can access the academic integrity in UTCS presentation here: <a href = "https://www.cs.utexas.edu/~scottm/misc/Academic_Integrity.pdf" >https://www.cs.utexas.edu/~scottm/misc/Academic_Integrity.pdf</a></p>
+<h3>Instructions:</h3>
+<ol>
+<li>Press the new social profile button to create a profile in our database.</li>
+<li>Look around in the list and pick a few people to reach out to!</li>
+</ol>
+<h3>Rules and Notices</h3>
+<li>Please note that for security reasons, we do not allow the editing or removal of a profile.</li>
+<li>Please refrain from creating multiple profiles or trolling.</li>
+<li>Please provide accurate information so that classmates can reach out without hassle.</li>
+<li>For permanent removal of friend profile, please contact the website administrator.</li>
+<br> 
+
+
+<h3> Create Profile </h3>
+<p></p>
+<%= link_to 'Create New Profile', new_user_path, class: "btn btn-primary"%>
+<br>
+<br>
+
+<table class="table table-striped table-bordered">
+  <div class="table-responsive">
+
+ <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
+      <th>First Name &nbsp;&nbsp;&nbsp; </th>
+      <th>Last Name&nbsp;&nbsp;&nbsp; </th>
+      <th>Email&nbsp;&nbsp;&nbsp; </th>
+      <th>More Information&nbsp;&nbsp;&nbsp; </th>
+
+      <%# <th>Email &nbsp;&nbsp;&nbsp;</th>
       <th>Phone</th>
-      <th>Twitter</th>
+      <th>Twitter</th> %>
       <th colspan="3"></th>
     </tr>
   </thead>
-
+<h3>Current Profiles</h3>
   <tbody>
     <% @users.each do |user| %>
       <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
-        <td><%= user.phone %></td>
-        <td><%= user.twitter %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%# <td><%= user.phone %></td> 
+        <%# <td><%= user.twitter%></td>  
+        <td><%= link_to 'Show Remaining Profile', user, class: "btn btn-primary" %></td>
+
+        <% if current_student && current_student.admin %>
+        <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', user, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
+
       </tr>
     <% end %>
   </tbody>
-</table>
+  </table>
+
+  </div>
+
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
