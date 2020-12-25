@@ -1,5 +1,25 @@
-<p>Welcome <%= @email %>!</p>
+<h3 style = "font-size: 16px">Welcome to CS312 Learning Hub!</h3>
+<p>We are so excited to have you as a student in this class.</p>
+<p>We have an exciting semester ahead of us, and we look forward to seeing you succeed. As teaching staff, it is of utmost importance that we provide a range of tools of assist our students in mastering core concepts in Java, strengthening their programming skills and approaching higher level problems more efficiently.</p>
+<p>By signing up, you have now gained access to a range of different tools:</p>
+<li>Find Friends</li>
+<li>Interactive Learning Portal</li>
+<li>Concept Tutorials</li>
+<li>...and more!</li>
 
-<p>You can confirm your account email through the link below:</p>
+<p>This web application is designed for students like yourself to truly take action and engage in their learning, especially in CS312, which is a quite rigorous class in the UT Department of Computer Science.</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p>If you have ANY additional questions, you are free to respond to this email and it will forward to the founder and creator of this application, Omeed Tehrani.</p>
+
+<p>In order to get started, please click the link below to confirm your account:</p>
+
+<p><%= link_to 'CONFIRM MY ACCOUNT', confirmation_url(@resource, confirmation_token: @token), class: "btn btn-primary" %></p>
+
+<p>If you would like to learn more about our privacy policy, please click this link below:</p>
+<p><a href = "https://cs312hub.herokuapp.com/home/privacy" >PRIVACY POLICY</a></p>
+<p>
+<p>
+<p>Here's to a great semester. Cheers!</p>
+<br>
+ <img  src="https://www.cs.utexas.edu/~gill/images/UTA_CS_logo.png" alt="", style="width:35%;height:35%;">
+

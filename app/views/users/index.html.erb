@@ -30,7 +30,7 @@
 <h3>About Friend Finder</h3>
 <p>During these times, it can be hard to connect with fellow classmates. We completely understand that.</p>
 <p>Studies have shown that when group studying is done correctly, it can have SEVERAL advantages vs. studying alone.</p>
-<p>A study done by a behavioral scientist showed that studying in groups actually increases the chance of processing difficult conceptual topics.</p>
+<p>Research done by a behavioral scientist showed that studying in groups actually increases the chance of processing difficult conceptual topics.</p>
 <p>Don't be scared to reach out to fellow classmates, but keep ALL academic integrity information in mind.</p>
 <p>You can access the academic integrity in UTCS presentation here: <a href = "https://www.cs.utexas.edu/~scottm/misc/Academic_Integrity.pdf" >https://www.cs.utexas.edu/~scottm/misc/Academic_Integrity.pdf</a></p>
 <h3>Instructions:</h3>
@@ -59,13 +59,13 @@
     <tr>
       <th>First Name &nbsp;&nbsp;&nbsp; </th>
       <th>Last Name&nbsp;&nbsp;&nbsp; </th>
-      <th>Email&nbsp;&nbsp;&nbsp; </th>
-      <th>More Information&nbsp;&nbsp;&nbsp; </th>
+      <%# <th>Email&nbsp;&nbsp;&nbsp; </th> %>
+      <th>Contact Information&nbsp;&nbsp;&nbsp; </th>
 
       <%# <th>Email &nbsp;&nbsp;&nbsp;</th>
       <th>Phone</th>
       <th>Twitter</th> %>
-      <th colspan="3"></th>
+      <%# <th colspan="3"></th> %>
     </tr>
   </thead>
 <h3>Current Profiles</h3>
@@ -74,10 +74,10 @@
       <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
+        <%# <td><%= user.email %></td>
         <%# <td><%= user.phone %></td> 
         <%# <td><%= user.twitter%></td>  
-        <td><%= link_to 'Show Remaining Profile', user, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Show More', user, class: "btn btn-primary" %></td>
 
         <% if current_student && current_student.admin %>
         <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-primary" %></td>
