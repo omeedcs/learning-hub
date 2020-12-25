@@ -119,6 +119,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Could use Heroku for web hosting and put our heroku URL
-config.action_mailer.default_url_options = { host: 'https://cs312hub.herokuapp.com/', port: 3000 }
+# config.action_mailer.default_url_options = { host: 'https://cs312hub.herokuapp.com/', port: 3000 }
+config.action_mailer.default_url_options = { :host => 'cs312hub.herokuapp.com' }
 
 end
