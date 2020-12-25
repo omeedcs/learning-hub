@@ -36,6 +36,7 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # gem 'sqlite3', '~> 1.4'
   gem 'pg'
+  gem 'sendgrid-ruby'
   # gem 'simple_form', '~> 3.2'
   # gem 'bootstrap-sass', '~> 3.3'
   # gem 'rack-mini-profiler', '~> 2.0'
