@@ -105,7 +105,7 @@
 
 <% @posts.each do |post| %> 
 <div class = "card p-3">
-   <h5>  <%= link_to post.title, community_post_path(post.community, post), class: "text-decoration-none" %></h5>
+   <h5>  <%= link_to post.title, community_post_path(post.community_id), class: "text-decoration-none" %></h5>
    <p>
     <%= truncate post.body, length: 200 %></p>
 	<p>
