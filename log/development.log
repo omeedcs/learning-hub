@@ -64228,3 +64228,624 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.5ms | Allocations: 7193)
 
 
+Started GET "/" for ::1 at 2020-12-26 13:56:54 -0600
+Started GET "/" for ::1 at 2020-12-26 13:56:58 -0600
+  
+ActiveRecord::ConnectionNotEstablished (could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+activerecord (6.1.0) lib/active_record/connection_adapters/postgresql_adapter.rb:83:in `rescue in new_client'
+activerecord (6.1.0) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.0) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.0) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.0) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.0) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.0) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.0) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.0) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.0) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.0) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.0) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  
+ActiveRecord::ConnectionNotEstablished (could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+activerecord (6.1.0) lib/active_record/connection_adapters/postgresql_adapter.rb:83:in `rescue in new_client'
+activerecord (6.1.0) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.0) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.0) lib/active_record/connection_handling.rb:319:in `retrieve_connection'
+activerecord (6.1.0) lib/active_record/connection_handling.rb:275:in `connection'
+activerecord (6.1.0) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.0) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.0) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.0) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.0) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.0) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.0) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-26 13:58:16 -0600
+  [1m[35m (33.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 37.8ms | Allocations: 891)
+  Rendered layout layouts/application.html.erb (Duration: 648.8ms | Allocations: 44095)
+Completed 200 OK in 781ms (Views: 653.7ms | ActiveRecord: 0.3ms | Allocations: 49192)
+
+
+Started GET "/students/sign_in" for ::1 at 2020-12-26 13:58:19 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 22.1ms | Allocations: 492)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 313.4ms | Allocations: 4579)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 163)
+  Rendered layout layouts/application.html.erb (Duration: 363.5ms | Allocations: 9138)
+Completed 200 OK in 412ms (Views: 370.5ms | ActiveRecord: 0.7ms | Allocations: 16561)
+
+
+Started POST "/students/sign_in" for ::1 at 2020-12-26 13:58:21 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"email"=>"braincraftpvp@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["email", "braincraftpvp@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 350ms (ActiveRecord: 0.2ms | Allocations: 4615)
+
+
+Started GET "/" for ::1 at 2020-12-26 13:58:21 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 4.7ms | Allocations: 168)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  Rendered home/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 6789)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 6854)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms | Allocations: 7333)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :community_id=>1, :controller=>"posts"}, missing required keys: [:id]
+Did you mean?  community_post_url
+               community_posts_url
+               community_posts_path
+               new_community_post_url):
+    105: 
+    106: <% @posts.each do |post| %> 
+    107: <div class = "card p-3">
+    108:    <h5>  <%= link_to post.title, community_post_path(post.community_id), class: "text-decoration-none" %></h5>
+    109:    <p>
+    110:     <%= truncate post.body, length: 200 %></p>
+    111: 	<p>
+  
+app/views/home/index.html.erb:108
+app/views/home/index.html.erb:106
+Started GET "/" for ::1 at 2020-12-26 13:59:15 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  Rendered home/index.html.erb within layouts/application (Duration: 143.5ms | Allocations: 12559)
+  Rendered layout layouts/application.html.erb (Duration: 143.7ms | Allocations: 12624)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 1.1ms | Allocations: 13958)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :community_id=>#<Community id: 1, student_id: 1, name: "Omeed Community", url: "qowndoqwnd", rules: "qondqoiwdnqoiwndoqiwndoiqwdqwd", total_members: nil, created_at: "2020-12-26 03:40:19.531636000 +0000", updated_at: "2020-12-26 03:40:19.531636000 +0000">, :controller=>"posts"}, missing required keys: [:id]
+Did you mean?  community_post_url
+               community_posts_url
+               community_posts_path
+               new_community_post_url):
+    105: 
+    106: <% @posts.each do |post| %> 
+    107: <div class = "card p-3">
+    108:    <h5>  <%= link_to post.title, community_post_path(post.community), class: "text-decoration-none" %></h5>
+    109:    <p>
+    110:     <%= truncate post.body, length: 200 %></p>
+    111: 	<p>
+  
+app/views/home/index.html.erb:108
+app/views/home/index.html.erb:106
+Started GET "/" for ::1 at 2020-12-26 13:59:17 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3285)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3349)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 3822)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :community_id=>#<Community id: 1, student_id: 1, name: "Omeed Community", url: "qowndoqwnd", rules: "qondqoiwdnqoiwndoqiwndoiqwdqwd", total_members: nil, created_at: "2020-12-26 03:40:19.531636000 +0000", updated_at: "2020-12-26 03:40:19.531636000 +0000">, :controller=>"posts"}, missing required keys: [:id]
+Did you mean?  community_post_url
+               community_posts_url
+               community_posts_path
+               new_community_post_url):
+    105: 
+    106: <% @posts.each do |post| %> 
+    107: <div class = "card p-3">
+    108:    <h5>  <%= link_to post.title, community_post_path(post.community), class: "text-decoration-none" %></h5>
+    109:    <p>
+    110:     <%= truncate post.body, length: 200 %></p>
+    111: 	<p>
+  
+app/views/home/index.html.erb:108
+app/views/home/index.html.erb:106
+Started GET "/" for ::1 at 2020-12-26 13:59:38 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  Rendered home/index.html.erb within layouts/application (Duration: 24.4ms | Allocations: 3369)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 3433)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms | Allocations: 4713)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :community_id=>1, :controller=>"posts"}, missing required keys: [:id]
+Did you mean?  community_post_url
+               community_posts_url
+               community_posts_path
+               new_community_post_url):
+    105: 
+    106: <% @posts.each do |post| %> 
+    107: <div class = "card p-3">
+    108:    <h5>  <%= link_to post.title, community_post_path(post.community_id), class: "text-decoration-none" %></h5>
+    109:    <p>
+    110:     <%= truncate post.body, length: 200 %></p>
+    111: 	<p>
+  
+app/views/home/index.html.erb:108
+app/views/home/index.html.erb:106
+Started GET "/" for ::1 at 2020-12-26 13:59:39 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  Rendered home/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2553)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2618)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 3102)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :community_id=>1, :controller=>"posts"}, missing required keys: [:id]
+Did you mean?  community_post_url
+               community_posts_url
+               community_posts_path
+               new_community_post_url):
+    105: 
+    106: <% @posts.each do |post| %> 
+    107: <div class = "card p-3">
+    108:    <h5>  <%= link_to post.title, community_post_path(post.community_id), class: "text-decoration-none" %></h5>
+    109:    <p>
+    110:     <%= truncate post.body, length: 200 %></p>
+    111: 	<p>
+  
+app/views/home/index.html.erb:108
+app/views/home/index.html.erb:106
+Started GET "/" for ::1 at 2020-12-26 14:00:01 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  Rendered home/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 3608)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 3672)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.4ms | Allocations: 4952)
+
+
+  
+ActionView::Template::Error (undefined method `community_id' for nil:NilClass):
+    105: 
+    106: <% @posts.each do |post| %> 
+    107: <div class = "card p-3">
+    108:    <h5>  <%= link_to post.title, community_post_path(@post.community_id), class: "text-decoration-none" %></h5>
+    109:    <p>
+    110:     <%= truncate post.body, length: 200 %></p>
+    111: 	<p>
+  
+app/views/home/index.html.erb:108
+app/views/home/index.html.erb:106
+Started GET "/" for ::1 at 2020-12-26 14:02:35 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:118
+  Rendered home/index.html.erb within layouts/application (Duration: 27.6ms | Allocations: 4523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 885)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 10673)
+Completed 200 OK in 84ms (Views: 82.3ms | ActiveRecord: 0.7ms | Allocations: 11981)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:03:08 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:122
+  Rendered home/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 4501)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 10317)
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.6ms | Allocations: 11604)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:03:57 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 25.7ms | Allocations: 4499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 62.5ms | Allocations: 10317)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.6ms | Allocations: 11594)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:05:06 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  Rendered home/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 3182)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 3246)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms | Allocations: 4498)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :community_id=>nil, :controller=>"posts", :id=>"1"}, missing required keys: [:community_id]):
+    107: <div class = "col-8">
+    108: <% @posts.each do |post| %> 
+    109: <div class = "card p-3">
+    110:    <h5><%= link_to post.title, community_post_path(@community, post), class: "text-decoration-none" %></h5>
+    111:    <p>
+    112:     <%= truncate post.body, length: 200 %></p>
+    113: 	</div>
+  
+app/views/home/index.html.erb:110
+app/views/home/index.html.erb:108
+Started GET "/" for ::1 at 2020-12-26 14:06:34 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 10321)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.8ms | Allocations: 11606)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:07:15 -0600
+Processing by HomeController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/home_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 42)
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 16627)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 60.5ms | Allocations: 21278)
+Completed 200 OK in 66ms (Views: 58.6ms | ActiveRecord: 3.0ms | Allocations: 24357)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:07:16 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 8379)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.5ms | Allocations: 8864)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:07:34 -0600
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 4955)
+
+
+  
+NameError (undefined local variable or method `id' for #<HomeController:0x00000000013560>):
+  
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/" for ::1 at 2020-12-26 14:07:37 -0600
+Processing by HomeController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/home_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 42)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCACHE Community Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:110
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 16645)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 21304)
+Completed 200 OK in 61ms (Views: 53.6ms | ActiveRecord: 2.9ms | Allocations: 24369)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:07:44 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.5ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 25.5ms | Allocations: 2766)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | Allocations: 8583)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.4ms | Allocations: 9886)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:07:44 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1937)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 6675)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.4ms | Allocations: 7183)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:07:45 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 6669)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.4ms | Allocations: 7156)
+
+
+Started GET "/" for ::1 at 2020-12-26 14:07:45 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:108
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:121
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 6669)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.4ms | Allocations: 7158)
+
+
