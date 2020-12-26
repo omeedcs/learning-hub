@@ -120,6 +120,6 @@ Rails.application.configure do
 
   # Could use Heroku for web hosting and put our heroku URL
 # config.action_mailer.default_url_options = { host: 'https://cs312hub.herokuapp.com/', port: 3000 }
-config.action_mailer.default_url_options = { :host => 'https://cs312hub.herokuapp.com' }
+# config.action_mailer.default_url_options = { :host => 'https://cs312hub.herokuapp.com' }
 
 end

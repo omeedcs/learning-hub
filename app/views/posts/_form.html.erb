@@ -1,0 +1,18 @@
+
+<div class = "row">
+<div class = "col-sm-6">
+<%= form_for [@community, @post] do |form| %>
+  <div class="field form-group">
+    <%= label_tag :name %>
+    <%= form.text_field :title, class: "form-control" %>
+    </div>
+          <div class="field form-group">
+    <%= label_tag :body %>
+    <%= form.text_area :body, class: "form-control" %>
+    </div>
+
+<br>
+<%= form.submit "Submit", class: "btn btn-primary"%>
+<% end %>
+</div>
+</div>

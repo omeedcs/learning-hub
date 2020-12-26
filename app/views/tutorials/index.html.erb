@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+    <% @tutorials.each do |tutorial| %>
+      <p><%= tutorial.name %></p>
+      <% tutorial.subtutorials.each do |subtutorial| %>
+      <%= subtutorial.name%>
+        <% end %>
+      <% end %>
+
+<h1>Tutorials</h1>
+<p></p>
+<p>In order to assist students in developing a strong understanding of introductory programming concepts in Java, I have made a range of tutorials available to read and study.</p>
+<p>Tutorials are stored in a blog format, and upon student request, new articles will be published. 
+<p>Clicking on the blue-underlined title will take you to the desired page. Thank you!</p>
+<br>
+
+
+
+<%# <%= link_to 'New Tutorial', new_tutorial_path %> 

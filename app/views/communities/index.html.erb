@@ -1,0 +1,22 @@
+
+<div class = "container">
+<div class = "col-sm-12">
+<div class = "float-right">
+<%= link_to "Create New Community", new_community_path, class: "btn btn-outline-primary" %>
+</div>
+
+
+
+<% if @communities.size > 0 %>
+<% @communities.each do |community| %>
+<div class = "card">
+    <h4><%= link_to community.name, community %></h4>
+    <%= simple_format community.rules %>
+    </div>
+
+    <% end %>
+    <% else %>
+    <p> No communities to display</p>
+    <% end %>
+    </div>
+    </div>

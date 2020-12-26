@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  resources :tutorials
+  resources :categories
   resources :articles
-  devise_for :students
   resources :users
+  devise_for :students
+  resources :communities do 
+  resources :posts
+  end 
   #get 'home/index'
   get 'home/about'
   get 'home/tutorials'
