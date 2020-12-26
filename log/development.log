@@ -63687,3 +63687,544 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 7766)
 
 
+Started GET "/" for ::1 at 2020-12-25 23:23:58 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 655)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 843)
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 6404)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.0ms | Allocations: 9326)
+
+
+Started GET "/students/sign_in" for ::1 at 2020-12-25 23:24:00 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 449)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered layout layouts/application.html.erb (Duration: 53.9ms | Allocations: 6533)
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 0.0ms | Allocations: 12699)
+
+
+Started POST "/students/sign_in" for ::1 at 2020-12-25 23:24:01 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"email"=>"omeed26@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["email", "omeed26@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 183ms (ActiveRecord: 0.2ms | Allocations: 3290)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:24:01 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 8616)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 196)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 13636)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.6ms | Allocations: 14146)
+
+
+Started DELETE "/students/sign_out" for ::1 at 2020-12-25 23:24:31 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1812)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:24:31 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 155)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 4827)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 5307)
+
+
+Started GET "/students/sign_up" for ::1 at 2020-12-25 23:24:32 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 179)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1486)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 163)
+  Rendered layout layouts/application.html.erb (Duration: 51.6ms | Allocations: 6196)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms | Allocations: 7418)
+
+
+Started POST "/students" for ::1 at 2020-12-25 23:24:38 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"email"=>"omeed26@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "omeed26@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 541)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 6631)
+Completed 200 OK in 229ms (Views: 45.9ms | ActiveRecord: 0.3ms | Allocations: 11633)
+
+
+Started POST "/students" for ::1 at 2020-12-25 23:24:47 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"email"=>"braincraftpvp@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "braincraftpvp@gmail.com"], ["LIMIT", 1]]
+  [1m[36mStudent Create (1.1ms)[0m  [1m[32mINSERT INTO "students" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "braincraftpvp@gmail.com"], ["encrypted_password", "$2a$12$K7XXlxwzHLtKhrBYoE./SuVZMtqFBrz88ux4d5WPxX14ki9wv6hvO"], ["created_at", "2020-12-26 05:24:47.816982"], ["updated_at", "2020-12-26 05:24:47.816982"]]
+  [1m[36mTRANSACTION (86.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 268ms (ActiveRecord: 87.9ms | Allocations: 5089)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:24:47 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 41)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 191)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 53.9ms | Allocations: 6715)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.5ms | Allocations: 7229)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:24:53 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 6625)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.5ms | Allocations: 7109)
+
+
+Started GET "/students" for ::1 at 2020-12-25 23:24:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+Started GET "/" for ::1 at 2020-12-25 23:24:57 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1914)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 6637)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.4ms | Allocations: 7124)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:24:59 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 6625)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.5ms | Allocations: 7117)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:24:59 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 6638)
+Completed 200 OK in 56ms (Views: 55.4ms | ActiveRecord: 0.5ms | Allocations: 7118)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:25:02 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 6625)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.5ms | Allocations: 7110)
+
+
+Started GET "/communities/1/posts/1" for ::1 at 2020-12-25 23:25:03 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"community_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:21
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 896)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 5619)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.3ms | Allocations: 7260)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:25:04 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 41)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 6649)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.5ms | Allocations: 7140)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:25:05 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 54.3ms | Allocations: 6625)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.5ms | Allocations: 7115)
+
+
+Started GET "/communities" for ::1 at 2020-12-25 23:25:06 -0600
+Processing by CommunitiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering communities/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "communities"[0m
+  ↳ app/views/communities/index.html.erb:10
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities"[0m
+  ↳ app/views/communities/index.html.erb:11
+  Rendered communities/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:21
+  Rendered home/_header.html.erb (Duration: 2.8ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 6832)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.5ms | Allocations: 7926)
+
+
+Started GET "/communities/new" for ::1 at 2020-12-25 23:25:07 -0600
+Processing by CommunitiesController#new as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering communities/new.html.erb within layouts/application
+  Rendered communities/_form.html.erb (Duration: 0.9ms | Allocations: 653)
+  Rendered communities/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 5639)
+Completed 200 OK in 56ms (Views: 52.1ms | ActiveRecord: 0.2ms | Allocations: 7160)
+
+
+Started POST "/communities" for ::1 at 2020-12-25 23:25:08 -0600
+Processing by CommunitiesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "community"=>{"name"=>"", "url"=>"", "rules"=>""}, "commit"=>"Submit"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/communities_controller.rb:21:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/communities_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/communities_controller.rb:21:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering communities/new.html.erb within layouts/application
+  Rendered communities/_form.html.erb (Duration: 1.3ms | Allocations: 1226)
+  Rendered communities/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 49.8ms | Allocations: 5925)
+Completed 200 OK in 58ms (Views: 50.4ms | ActiveRecord: 0.4ms | Allocations: 10531)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:25:09 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 41)
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 6644)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.6ms | Allocations: 7135)
+
+
+Started GET "/communities/1/posts/1" for ::1 at 2020-12-25 23:25:11 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"community_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:21
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 896)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 5564)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.3ms | Allocations: 6435)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:25:11 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 6625)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.5ms | Allocations: 7109)
+
+
+Started GET "/communities" for ::1 at 2020-12-25 23:25:19 -0600
+Processing by CommunitiesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering communities/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "communities"[0m
+  ↳ app/views/communities/index.html.erb:10
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities"[0m
+  ↳ app/views/communities/index.html.erb:11
+  Rendered communities/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:21
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 6552)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.4ms | Allocations: 6993)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:25:20 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 36)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 6630)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.5ms | Allocations: 7124)
+
+
+Started GET "/communities/1" for ::1 at 2020-12-25 23:25:23 -0600
+Processing by CommunitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/communities_controller.rb:31:in `set_community'
+  Rendering layout layouts/application.html.erb
+  Rendering communities/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."community_id" = ?[0m  [["community_id", 1]]
+  ↳ app/views/communities/show.html.erb:5
+  Rendered communities/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:21
+  Rendered home/_header.html.erb (Duration: 3.0ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 7004)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 0.6ms | Allocations: 8571)
+
+
+Started GET "/communities/1/posts/new" for ::1 at 2020-12-25 23:25:24 -0600
+Processing by PostsController#new as HTML
+  Parameters: {"community_id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.1ms | Allocations: 602)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 5615)
+Completed 200 OK in 56ms (Views: 48.1ms | ActiveRecord: 0.4ms | Allocations: 7576)
+
+
+Started POST "/communities/1/posts" for ::1 at 2020-12-25 23:25:31 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>"Hello!\r\nHow are you doing today?"}, "commit"=>"Submit", "community_id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mCommunity Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.8ms | Allocations: 598)
+  Rendered posts/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 655)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | Allocations: 5284)
+Completed 200 OK in 57ms (Views: 47.5ms | ActiveRecord: 0.5ms | Allocations: 11116)
+
+
+Started POST "/communities/1/posts" for ::1 at 2020-12-25 23:25:35 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Test", "body"=>"Hello!\r\nHow are you doing today?"}, "commit"=>"Submit", "community_id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mCommunity Load (0.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("student_id", "community_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["student_id", 2], ["community_id", 1], ["title", "Test"], ["body", "Hello!\r\nHow are you doing today?"], ["created_at", "2020-12-26 05:25:35.429909"], ["updated_at", "2020-12-26 05:25:35.429909"]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (75.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+Redirected to http://localhost:3000/communities/1
+Completed 302 Found in 87ms (ActiveRecord: 77.0ms | Allocations: 4635)
+
+
+Started GET "/communities/1" for ::1 at 2020-12-25 23:25:35 -0600
+Processing by CommunitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/communities_controller.rb:31:in `set_community'
+  Rendering layout layouts/application.html.erb
+  Rendering communities/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."community_id" = ?[0m  [["community_id", 1]]
+  ↳ app/views/communities/show.html.erb:5
+  Rendered communities/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 751)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:21
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | Allocations: 6176)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.6ms | Allocations: 7088)
+
+
+Started GET "/communities/1/posts/3" for ::1 at 2020-12-25 23:25:36 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"community_id"=>"1", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:21
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 884)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 5548)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.3ms | Allocations: 6420)
+
+
+Started GET "/" for ::1 at 2020-12-25 23:25:39 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:69
+  Rendered home/_homepageheader.html.erb (Duration: 0.1ms | Allocations: 41)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC, "desc" ASC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/home/index.html.erb:106
+  [1m[36mCommunity Load (0.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/home/index.html.erb:119
+  Rendered home/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1969)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 6702)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.5ms | Allocations: 7193)
+
+

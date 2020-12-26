@@ -103,6 +103,9 @@
 	<div class = "row">
 	<div class = "col-8">
 	
+	<% if @posts.size == 0 %> 
+	Oh no! No posts have been created.
+	<% else %>
 <% @posts.each do |post| %> 
 <div class = "card p-3 border-width: 5">
    <h5>  <%= link_to post.title, community_post_path(post.community_id, post), class: "text-decoration-none" %></h5>
@@ -111,6 +114,7 @@
 	</div>
 	<p>
 <% end %>
+<%end%>
 	</div>
 
 	<div class = "col-4">
