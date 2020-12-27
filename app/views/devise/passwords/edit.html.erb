@@ -1,25 +1,70 @@
-<h2>Change your password</h2>
+<style>
+.content {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.imageStyle {
+   width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+
+.text {
+  margin-top: 10%;
+}
+
+#hp  {
+float: right;    
+ margin: 0 0 0 0;
+}
+
+.floatRight{float:right;margin-left:0px}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 2%;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+
+</style>
+
+<br>
+<div class = "content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1200px-Twitter_Verified_Badge.svg.png" alt = "" class="imageStyle"/>
+</div>
+<div style = "text">
+<h1>Change your password</h1> 
+</div>
+
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-  <%= f.hidden_field :reset_password_token %>
-
+<br>
+  <p>Thank you for pressing the link! Let's get your password reset.</p>
+<p>Remember that it is important to choose a secure password to avoid your account being hacked or stolen.</p>
   <div class="field">
-    <%= f.label :password, "New password" %><br />
+
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em><br />
     <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+    <%= f.password_field :password, autofocus: true, class: "form-control", autocomplete: "new-password", placeholder: "Password" %>
   </div>
-
+  </p>
   <div class="field">
     <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password", placeholder: "Confirm Password" %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= f.submit "Change my password" %>
+    <%= f.submit "Change my password", class: "btn btn-success btn-md" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%# <%= render "devise/shared/links" %> 

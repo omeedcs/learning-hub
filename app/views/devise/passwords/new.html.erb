@@ -42,13 +42,14 @@ float: right;
 <div style = "text">
 <h1>Forgot Password</h1> 
 </div>
-<p></p>
+<br>
+<p> Please enter the email associated with your account for a password reset. Instructions will be sent to your email.</p>
+
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field form-group">
-    <p style="font-size:18px"> <%=  f.label :email %><p>
     <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email" %>
   </div>
   <br>
@@ -57,4 +58,4 @@ float: right;
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%# <%= render "devise/shared/links" %> 
