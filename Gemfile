@@ -45,7 +45,7 @@ group :development do
   # 4. Update the database file, the new file I have created contains both configurations.
   # 5. Choose the configuratoon and migrate according to what you are trying to accomplish.
 
-  gem 'sqlite3', '~> 1.4'
+  # gem 'sqlite3', '~> 1.4'
   gem 'pg'
   # gem 'sendgrid-ruby'
   # gem 'simple_form', '~> 3.2'
