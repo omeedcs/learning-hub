@@ -1,0 +1,11 @@
+<div class = "row">
+<div class = col-sm-8>
+    <%= render partial: "posts/list", locals: {posts: @posts} %>
+</div>
+<div class = "col-sm-4 bg-light ">
+    <h4><%= @profile.full_name %></h4>
+   <h5> <%= @profile.username %></h5>
+   <p> Hello my name is Omeed Tehrani and I like eating cake, chocolate ice cream, and mashed potatoes.</p>
+    <p><em>Date Joined:</em> <%= @profile.created_at.strftime("%m/%d/%Y") %></p>
+</div>
+</div>

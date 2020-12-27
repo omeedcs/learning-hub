@@ -74,6 +74,7 @@
     <%# <h2>Welcome to CS312 (Introduction to Programming) Learning Hub!</h2> %>
 		    <%= render 'home/homepageheader' %>
 	
+	<section class = "bg-light">
 	<br>
 	<div class = "container">
 	    <h4>Live Feed</h4>
@@ -105,13 +106,7 @@
 
 <div class = "row">
 <div class = "col-8">
-<% @posts.each do |post| %> 
-<div class = "card p-3">
-   <h5><%= link_to post.title, community_post_path(post.community_id, post), class: "text-decoration-none" %></h5>
-   <p>
-    <%= truncate post.body, length: 200 %></p>
-	</div>
-<% end %>
+	<%= render partial: "posts/list", locals: { posts: @posts }%>
 	</div>
 	
 
@@ -132,14 +127,14 @@
 
 </div>
 <p></p>
-
-<footer>
+</section>
+<%# <footer>
 <div class = "footer">
 <a href="https://cs.utexas.edu">
  <img  src="https://www.cs.utexas.edu/~gill/images/UTA_CS_logo.png" alt="", style="width:35%;height:35%;">
 </div>
 </a>
-</footer>
+</footer> %>
 
 <% else %>
 	<div class="alert alert-primary" role="alert">

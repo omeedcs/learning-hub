@@ -1,13 +1,31 @@
-<div class = "container">
-    <div class = "row">
-        <div class = "col-12 pt-3 pb-3 mb-4 border-bottom">
+<div class = "container" >
+    <div class = "row" >
+        <div class = "col-12 pt-3 pb-3 mb-4 border-bottom " >
             <div class = "align-items-end">
 
-<%# <%= link_to "Test #1", root_path, class: "btn btn-outline-primary" %>
-<%# <%= link_to "Test #1", root_path, class: "btn btn-primary" %>
+<div class = "float-end">
+        <div class="nav-item dropdown">
+          <a class="btn btn-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <%= current_student.full_name %>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Homepage", root_path, class: "dropdown-item" %>
+          <%= link_to "Create New Community", new_community_path, class: "dropdown-item"%>
+          <hr class="dropdown-divider">
+           <%= link_to "View Public Profile", profile_path(current_student.username), class: "dropdown-item" %>
+
+          </ul>
+        </div>
+        </div>
+
+
 </div>
 <p class = "h2"> <%= link_to "CS312 Student Homepage", root_path, class: "text-decoration-none" %></p>
 </div>
 </div>
 </div>
 </div>
+
+
+
+

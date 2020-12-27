@@ -1,0 +1,6 @@
+<% comments.each do |comment| %>
+<div class = "comment">
+<%= link_to comment.student.full_name, profile_path(comment.student.username), class: "text-decoration-none" %>
+<p class = "mb-0"><small> <%= comment.message %> </small> <p>
+</div>
+<% end %>

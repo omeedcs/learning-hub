@@ -1,3 +1,19 @@
 <h2> <%= @post.title %></h2>
+
 <%= simple_format @post.body %>
-<%# <%= render partial: "form" %> 
+
+<div id = "post-comments">
+<%= render partial: "posts/comments", locals: {comments: @post.comments} %>
+</div>
+
+<h4>Questions? Comments? Let the CS312 Instructors Know.</h4>
+<p>We want you to engage! It is important that you let us know what is confusing! </p>
+<p>Leave a comment down below and engage with fellow classmates.</p>
+<%= form_for @comment, remote: true do |f| %>
+<%= f.hidden_field :post_id, value: @post.id %>
+<%= f.text_area :message, placeholder: "Place comment or question here...", class: "form-control"%>
+<p></p>
+<%= f.submit "Submit Question/Comment", class: "btn btn-success btn-md"%>
+<% end %>
+<br>
+<br>

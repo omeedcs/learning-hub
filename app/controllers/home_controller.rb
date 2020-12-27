@@ -30,4 +30,9 @@ class HomeController < ApplicationController
   def queue
   end
 
+  def profile 
+    @profile = Student.find_by_username params[:username]
+    @posts = @profile.posts
+  end 
+
 end

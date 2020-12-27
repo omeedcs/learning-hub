@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_26_033241) do
+ActiveRecord::Schema.define(version: 2020_12_27_002944) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2020_12_26_033241) do
     t.integer "category_id"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "post_id"
+    t.text "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["student_id"], name: "index_comments_on_student_id"
+  end
+
   create_table "communities", force: :cascade do |t|
     t.integer "student_id"
     t.string "name"
@@ -29,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_12_26_033241) do
     t.integer "total_members"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "summary"
     t.index ["student_id"], name: "index_communities_on_student_id"
   end
 
@@ -49,17 +60,27 @@ ActiveRecord::Schema.define(version: 2020_12_26_033241) do
   create_table "students", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "first_name", default: "", null: false
+    t.string "last_name", default: "", null: false
+    t.string "ut_eid", default: "", null: false
+    t.string "username", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
     t.index ["email"], name: "index_students_on_email", unique: true
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "community_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["community_id"], name: "index_subscriptions_on_community_id"
+    t.index ["student_id"], name: "index_subscriptions_on_student_id"
   end
 
   create_table "tutorials", force: :cascade do |t|

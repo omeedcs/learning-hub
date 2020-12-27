@@ -1,22 +1,25 @@
-
+<p></p> 
+<div>
 <div class = "container">
 <div class = "col-sm-12">
-<div class = "float-right">
+<div class = "float-end">
 <%= link_to "Create New Community", new_community_path, class: "btn btn-outline-primary" %>
 </div>
 
-
-
+<h4> Current CS312 Topics, Groups and Communities </h4>
+</div>
+<br>
 <% if @communities.size > 0 %>
 <% @communities.each do |community| %>
-<div class = "card">
+<div class = "card p-3">
     <h4><%= link_to community.name, community %></h4>
     <%= simple_format community.rules %>
     </div>
 
     <% end %>
     <% else %>
-    <p> No communities to display</p>
+    <br>
+    <p> Oh no! No topic, group, or community exists.</p>
     <% end %>
     </div>
     </div>

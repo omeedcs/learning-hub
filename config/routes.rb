@@ -4,9 +4,15 @@ Rails.application.routes.draw do
   resources :articles
   resources :users
   devise_for :students
+  get "u/:username" => "home#profile", as: :profile
+
+  # section to pair communities and posts.
   resources :communities do 
   resources :posts
   end 
+
+  resources :subscriptions
+  resources :comments, only: [:create]
   #get 'home/index'
   get 'home/about'
   get 'home/tutorials'

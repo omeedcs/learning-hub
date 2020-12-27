@@ -34,6 +34,17 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
+
+  # Comment from Omeed for later devs:
+   # The SQLITE database is designed for localhost development. 
+  # In order to deploy to a production environment, take the steps below:
+
+  # 1. Comment out the SQLITE Gem.
+  # 2. Comment in the pg gem, aka postgres.
+  # 3. Run a bundle install.
+  # 4. Update the database file, the new file I have created contains both configurations.
+  # 5. Choose the configuratoon and migrate according to what you are trying to accomplish.
+
   # gem 'sqlite3', '~> 1.4'
   gem 'pg'
   # gem 'sendgrid-ruby'

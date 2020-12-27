@@ -54,6 +54,26 @@ float: right;
     <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email" %>
   </div>
 
+    <div class="field form-group">
+ <p style="font-size:18px"> First Name<p> 
+    <%= f.text_field :first_name, class: "form-control", placeholder: "First Name", autofocus: true, autocomplete: "email" %>
+  </div>
+
+    <div class="field form-group">
+ <p style="font-size:18px"> Last Name <p> 
+    <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field form-group">
+ <p style="font-size:18px"> UT EID<p> 
+    <%= f.text_field :ut_eid, class: "form-control", placeholder: "Last Name", autofocus: true, autocomplete: "email" %>
+  </div>
+
+    <div class="field form-group">
+ <p style="font-size:18px"> <%=  f.label :username %><p> 
+    <%= f.text_field :username, class: "form-control", placeholder: "Last Name", autofocus: true, autocomplete: "email" %>
+  </div>
+
   <div class="field form-group">
   <p style="font-size:18px"> <%= f.label :password %><br /><p>   
 
