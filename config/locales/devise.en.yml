@@ -20,13 +20,13 @@ en:
       confirmation_instructions:
         subject: "CS312 Learning Hub - Confirmation Instructions"
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "CS312 Learning Hub - Reset Password Instructions"
       unlock_instructions:
         subject: "Unlock instructions"
       email_changed:
-        subject: "Email Changed"
+        subject: "CS312 Learning Hub Notification - Email Changed"
       password_change:
-        subject: "Password Changed"
+        subject: "CS312 Learning Hub Notification - Password Changed"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
