@@ -4,38 +4,13 @@
   max-height: 100%;
   margin: auto;
 }
-
 .imageStyle {
    width: 60px;
   height: 60px;
   float: left;
   margin-right: 10px;
 }
-
-.text {
-  margin-top: 10%;
-}
-
-#hp  {
-float: right;    
- margin: 0 0 0 0;
-}
-
-.floatRight{float:right;margin-left:0px}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 2%;
-  width: 100%;
-  background-color: transparent;
-  color: white;
-  text-align: center;
-}
-
-
 </style>
-
 
 <br>
 <div class = "content">
@@ -66,12 +41,12 @@ float: right;
 
   <div class="field form-group">
  <p style="font-size:18px"> UT EID<p> 
-    <%= f.text_field :ut_eid, class: "form-control", placeholder: "Last Name", autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :ut_eid, class: "form-control", placeholder: "UT EID", autofocus: true, autocomplete: "email" %>
   </div>
 
     <div class="field form-group">
  <p style="font-size:18px"> <%=  f.label :username %><p> 
-    <%= f.text_field :username, class: "form-control", placeholder: "Last Name", autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :username, class: "form-control", placeholder: "Username", autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field form-group">
@@ -89,5 +64,7 @@ float: right;
     <%= f.submit "Complete Sign Up", class: "btn btn-primary btn-md" %>
   </div>
 <% end %>
+<br> 
+<br> 
 
 <%# <%= render "devise/shared/links" %> 

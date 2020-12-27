@@ -1,9 +1,9 @@
-# README
+# CS312 Learning Hub
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web application designed by Omeed Tehrani to completely streamline engagement and learning for students of CS312 (Introduction to Programming).
+Application is designed through the framework Ruby on Rails, which can be found here: https://rubyonrails.org/
 
-Things you may want to cover:
+Getting Started for Development & Production:
 
 * Ruby version
 
