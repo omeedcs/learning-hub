@@ -31,16 +31,22 @@
 
     <div class="field form-group">
  <p style="font-size:18px"> First Name<p> 
-    <%= f.text_field :first_name, class: "form-control", placeholder: "First Name", autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :first_name, class: "form-control", placeholder: "First Name", autofocus: true %>
   </div>
 
     <div class="field form-group">
  <p style="font-size:18px"> Last Name <p> 
-    <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", autofocus: true %>
   </div>
+
+  <div class="field form-group">
+ <p style="font-size:18px"> UT EID<p> 
+    <%= f.text_field :ut_eid, class: "form-control", placeholder: "UT EID", autofocus: true %>
+  </div>
+
     <div class="field form-group">
  <p style="font-size:18px"> <%=  f.label :username %><p> 
-    <%= f.text_field :username, class: "form-control", placeholder: "Username", autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :username, class: "form-control", placeholder: "Username", autofocus: true %>
   </div>
 
   <div class="field form-group">
