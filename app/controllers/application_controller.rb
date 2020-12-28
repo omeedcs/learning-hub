@@ -4,7 +4,7 @@
         protected
       
         def configure_permitted_parameters
-        devise_parameter_sanitizer.permit(:student_update, keys: [:first_name, :last_name, :username, :ut_eid])
-        devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :username, :ut_eid])
+        devise_parameter_sanitizer.permit(:student_update, keys: [:first_name, :last_name, :username])
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :username])
     end
 end

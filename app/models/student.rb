@@ -8,7 +8,7 @@ class Student < ApplicationRecord
   has_many :communities, through: :subscriptions
   has_many :comments
 
-  validates_presence_of :first_name, :last_name, :username, :ut_eid
+  validates_presence_of :first_name, :last_name, :username
   
   def full_name
     "#{first_name} #{last_name}"
