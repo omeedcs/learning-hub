@@ -13,8 +13,8 @@ class CommentsController < ApplicationController
             # unable to save
         end 
     }
-    end 
-end 
+    end
+end
 
     def comment_params
         params.require(:comment).permit(:message, :post_id)

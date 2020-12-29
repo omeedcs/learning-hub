@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_27_002944) do
+ActiveRecord::Schema.define(version: 2020_12_29_045313) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2020_12_27_002944) do
     t.string "last_name", default: "", null: false
     t.string "ut_eid", default: "", null: false
     t.string "username", default: "", null: false
+    t.string "bio", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -74,6 +75,7 @@ ActiveRecord::Schema.define(version: 2020_12_27_002944) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
+    t.integer "engagement", default: 0
     t.index ["email"], name: "index_students_on_email", unique: true
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
   end
@@ -103,6 +105,16 @@ ActiveRecord::Schema.define(version: 2020_12_27_002944) do
     t.string "twitter"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "post_id"
+    t.boolean "upvote"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_votes_on_post_id"
+    t.index ["student_id"], name: "index_votes_on_student_id"
   end
 
 end

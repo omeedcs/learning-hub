@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   resources :posts
   end 
 
+  post "post/vote" => "votes#create"
+
   resources :subscriptions
-  resources :comments, only: [:create]
+  resources :comments, only: [:create]  
   #get 'home/index'
   get 'home/about'
   get 'home/tutorials'

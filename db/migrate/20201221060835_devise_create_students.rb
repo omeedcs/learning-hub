@@ -10,6 +10,7 @@ class DeviseCreateStudents < ActiveRecord::Migration[6.1]
       t.string :last_name, null: false, default: ""
       t.string :ut_eid, null: false, default: ""
       t.string :username, null: false, default: ""
+      t.string :bio, null: false, default: ""
 
       ## Recoverable
       t.string   :reset_password_token
