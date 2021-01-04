@@ -10,16 +10,27 @@
   float: left;
   margin-right: 10px;
 }
+
+
+.titleAlignment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
 </style>
 
 <br>
-<div class = "content">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1200px-Twitter_Verified_Badge.svg.png" alt = "" class="imageStyle"/>
+<div class = "titleAlignment">
+<img src="https://pngimage.net/wp-content/uploads/2018/06/%D0%B6%D0%B5%D1%81%D1%82-%D0%BA%D0%BE%D0%B7%D0%B0-png-1.png" alt = "" style = "width:100px"/>
+<h1>&nbsp; Student Account Registration &nbsp;</h1> 
+<img src="https://pngimage.net/wp-content/uploads/2018/06/%D0%B6%D0%B5%D1%81%D1%82-%D0%BA%D0%BE%D0%B7%D0%B0-png-1.png" alt = "" style = "width:100px"/>
 </div>
-<div style = "text">
-<h1>Student Account Registration</h1> 
-</div>
-<p></p>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>

@@ -3,6 +3,19 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <style>
+
+.welcome {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
 .footer {
   position: fixed;
   left: 0;
@@ -191,52 +204,65 @@
 
 <% else %>
 	<div class="alert alert-primary" role="alert">
- 	<b>To Beta Testers:</b> Over the course of the next couple weeks, expect several bugs. Please report them to me at my email => omeed@cs.utexas.edu. Cheers!
+ 	<b>To Beta Testers:</b> Over the course of the next couple weeks, expect several bugs. Regardless of seriousness, please report them to me!
 	</div>	
 	<br>
-	<div>
-    <p style="float: right;"class = "margin" >
-    <img src="https://www.pngkey.com/png/full/396-3960421_abstract-png-transparent-images-connect-the-data-dots.png" height="90%" width="90%"></p>
- 	<div class = "margin">
+	<div class = "container">
+    <%# <p style="float: right;"class = "margin" >
+ 	<div class = "margin"> %>
   	<%# <h3>Welcome to the CS312 (Intro to Programming) Learning Hub!</h3> %>
-	<h3 style="font-size:20px">Welcome to the CS312 Learning Hub!</h3>
+	  <div class = "welcome">
+	  	  	<h1>Welcome to the CS312 Learning Hub! &nbsp;</h1>
+	  	    <img src="https://www.pngkey.com/png/full/396-3960421_abstract-png-transparent-images-connect-the-data-dots.png" style="width: 130px;">
+	</div>
+	<hr>
+	<h4>Introduction</h4>
+	<p>Greetings! My name is <a href = "https://cs.utexas.edu/~omeed"> Omeed Tehrani</a> and I am the founder and creator of the CS312 Learning Hub. During my winter break, I built this website for students in hopes of making the learning experience of introductory programming concepts more interactive, fun and enjoyable. In my opinion, the difficulty of Java lies in its abstraction and attention to detail that makes a huge differences the programmer's code cleanliness and correctness. Trust me, I completely understand that COVID-19 has been difficult, but as long as we interact and work together, we're going to get through this pandemic together & you will come out this class feeling like a better programmer and a champion.
+	<p>Below this section, there is a great deal of information about the website and how to use it. If you are new, please read the instructions thoroughly. If you are a returning user, please navigate to the "Sign In" tab. Student account information is inaccesible in the database for privacy reasons, so please take your time in the account creation process.</p>
+	<hr>
+	<h4>Account Registration</h4>
+	<p> Each student is permitted to register one account in the database. This account is designed to give the student a personalized experience on the learning application. Please refrain from registering multiple accounts. If you would like to create a new account with another email, please navigate to the "Manage Account" section after you have logged in and delete your account from the database.</p>
+	<em> To get started on account registration, follow the steps below: </em>
+	<ol>
+	<li> Navigate to the tab above and select "Sign Up". </li>
+	<li> Fill in all the required fields & ensure that you select a unique and secure password. </li>
+	<li> The website will then show you a notification instructing to check your email for account verification steps</li>
+	<li> After waiting approximately 1 to 2 minutes, the system will automatically send the email.</li> 
+	<li> You should look for an email titled "CS312 Learning Hub - Confirmation Instructions" from the address: <a href = "mailto:cs312hub@gmail.com"> cs312hub@gmail.com</a> </li>
+	<li> After finding the email, please read it thoroughly. If you did not recieve the email, I would recommend checking your spam folder (Sometimes this occurs because the mail server is recieving an email from an unknown IP or unknown address).</li>
+	<li> Select the link labeled "CONFIRM MY ACCOUNT" to activate your account. If the confirmation token is recent and valid, you will see a notification on the website telling you that your email has been confirmed.</li>
+	<li> This means that your account is now activated. You can now navigate to the tab that is labeled "Sign In" and log in with your previously created credentials.</li>
+	<li> After signed in, the navigation bar will unlock a whole new set of tabs, and your learning hub experience has begun!</li> 
+	<li> <em> Please note:</em> The system will not allow a login until the account has been activated. </li>
     <%# <h2>Welcome to CS312 (Introduction to Programming) Learning Hub!</h2> %>
-<h3 style="font-size:16px">If this is your first time, please read the information below:</h3>
-<p></p>
-
-<%# <em>Instructions / Getting Started (Please follow these steps sequentially):</em> %>
-<em>How do I get started?</em>
-<ol>
-<li>Navigate to the tab above and select "Sign Up".</li>
-<li>Enter all the required fields, create account, and a series of new tabs will unlock.</li>
-<li>After sign up, the welcome page will update for further information on new tabs.</li>
-<li>These new tabs include: <em>Office Hours Queue, Interactive Learning, Tutorials, etc.</em></li>
-<li>If you already have an account, please navigate to "Sign In".</li>
-<li>If you have any questions, please navigate to the "Contact Us" tab.</li>
-</ol>
-<p></p>
-<p style="float: right;"class = "margin"></p>
-
-<em>Who is this web application designed for?</em>
-<li>Students in CS312.</li>
-<li>Any student trying to learn the basics of programming.</li>
-
-<p></p>
-<em>What is the purpose of the web application?</em>
-<li>Provide a centrality point of all things CS312.</li>
-<li>Assist students in the learning process.</li>
-<li>Help students be successful and engage in their learning.</li>
-<p></p>
-
-<p></p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+	</ol>
+	<hr>
+	<h4>Features</h4>
+	<p> After approximately 55 Beta versions, this application has reached the first stage of deployment for students. Please note that I am constantly looking for new features to add. If you have any recommendations, please reach out to me at my email (<a href= "mailto:omeed@cs.utexas.edu">omeed@cs.utexas.edu</a>) with a descriptive subject line such as "Feature Recommendation".
+	<li>Personalized Student Profile</li>
+		<li>Personalized Student Homepage</li>
+	<li>Engagement Point Tracker</li>
+		<li>Public and Private Profile Management</li>
+	<li>Friend/Classmate Finder</li>
+	<li>Office Hour Queue (provided generously by CS314 developers)</li>
+	<li>Interactive Learning</li>
+		<li>Concept Wikis/Tutorials</li>
+				<li>Concept Posts (Organized by Communities)</li>
+	<li>Post Engagement Ability</li>
+	<hr>
+	<h5>Development Information</h5>
+	<p>This web application was created from the ground up using the <a href = "https://rubyonrails.org/"> Ruby on Rails</a>, an open source, server-side framework that has gotten multiple <a href = "https://contributors.rubyonrails.org/"> contributions</a> and is the basis of popular applications such as Shopify and Twitch. This framework is written in Ruby, the programming language, and used alongside Rails. To any student who is looking to build a web application, I highly recommend this framework.</p>
+	<p>The hosting of this application is done through <a href = "https://heroku.com/"> Heroku</a>, a cloud application platform supporting several programming languages. This application does not contain any add-ons, but uses the SendGrid mail application to reroute emails to students after registration. The application is upgraded to use Hobby Development Dynos, but will be upgraded according to usage and scale. As of present day, there have been 100+ updates to GitHub, and about 55 deployments from GitHub to the heroku development branch, but of course, this number will increase as new features are added and new bugs are found.</p> 
+	<p>If you are not currently a student, or are a former student looking for a side project, please personally reach out to me through email, as I will be recruiting developers to help improve and expand this application and many others for my SaaS company launching sometime this year. No experience is required.</p>
+	<hr>
+	<br>
+	<footer>
+     <center>
+      <img width="35%" src = "https://www.cs.utexas.edu/sites/all/themes/utcs2/images/cslogo.svg">
+    </center>
+      <!-- $Social-->
+   <footer>
+       <br>    
 </div>
 <div>
 <%# <center>

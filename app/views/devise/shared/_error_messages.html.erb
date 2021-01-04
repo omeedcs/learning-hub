@@ -1,12 +1,14 @@
 <% if resource.errors.any? %>
-  <div id="error_explanation">
-    <h2>
+<p>
+  <div id="error_explanation" class = "card p-2">
+    <h5>
       <%= I18n.t("errors.messages.not_saved",
                  count: resource.errors.count,
                  resource: resource.class.model_name.human.downcase)
        %>
-    </h2>
-    <ul>
+    </h5>
+    <p> Please fix these errors and then try again. Thank you! 😊</p>
+    <ul style = "color:red">
       <% resource.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>

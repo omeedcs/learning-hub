@@ -1,6 +1,8 @@
 <% comments.each do |comment| %>
+<div style = "background-color:#BF5700;" class = "card p-2">
 <div class = "comment">
 <%= link_to comment.student.full_name, profile_path(comment.student.username), class: "text-decoration-none" %>
-<p class = "mb-0"><small> <%= comment.message %> </small> <p>
+<p style = "color:white" class = "mb-0"><small> <%= comment.message %> </small> <p>
+</div>
 </div>
 <% end %>
