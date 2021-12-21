@@ -1,3 +1,5 @@
+## Learning Hub
+
 Web application that was initially designed to serve as a side resource for students of CS312 (Introduction to Programming). Core features of the application are designed through Ruby on Rails. The website can be accessed through this link: https://bit.ly/3mlRYCz
 
 After multiple Beta versions, this application had reached the first stage of deployment for students. But unfortunately, the logistics of it to actually deploy to UT Computer Science students was quite messy, so it never went into production. But, a lot of things were learned through the creation of this product, so feel free to hop on it, make an account, and enjoy!
