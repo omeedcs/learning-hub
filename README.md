@@ -25,4 +25,5 @@ The hosting of this application is done through Heroku, a cloud application plat
 
 PREVIEW: 
 
-<img width="1417" alt="Screen Shot 2021-12-20 at 6 03 33 PM" src="https://user-images.githubusercontent.com/61725820/146848741-0ccb2a48-faa2-47aa-ab66-762835cc0226.png">
+<img width="1348" alt="Screen Shot 2021-12-20 at 6 07 12 PM" src="https://user-images.githubusercontent.com/61725820/146848931-7eff95c8-d1f5-4cfb-8205-8c1a48cfe891.png">
+
