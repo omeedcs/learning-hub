@@ -21,7 +21,7 @@ FEATURES:
 
 HOSTING: 
 
-The hosting of this application is done through Heroku, a cloud application platform supporting several programming languages. This application does not contain any add-ons, but uses the SendGrid mail application to reroute emails to students after registration. The application is upgraded to use Hobby Development Dynos, but will be upgraded according to usage and scale. As of present day, there have been 100+ updates to GitHub, and about 55 deployments from GitHub to the heroku development branch, but of course, this number will increase as new features are added and new bugs are found.
+The hosting of this application is done through Heroku, a cloud application platform supporting several programming languages. This application does not contain any add-ons, but uses the SendGrid mail application to reroute emails to students after registration. The application is upgraded to use Hobby Development Dynos, but will be upgraded according to usage and scale. As of present day, there have been 100+ updates to GitHub, and about 55 deployments from GitHub to the heroku development branch. This product is not completely finished, but will most likely not be expanded on for the time being. 
 
 PREVIEW: 
 
